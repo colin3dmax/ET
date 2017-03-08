@@ -1592,7 +1592,7 @@ sourceOperationMaskForDraggingContext: (NSDraggingContext) context
 - (void) positionSubViews
 {
     //修改底部状态栏高度
-    CGFloat scrollerWidth = 32;//[NSScroller scrollerWidthForControlSize:NSRegularControlSize scrollerStyle:NSScrollerStyleLegacy];
+    CGFloat scrollerWidth = 20;//[NSScroller scrollerWidthForControlSize:NSRegularControlSize scrollerStyle:NSScrollerStyleLegacy];
 
   NSSize size = [self frame].size;
   NSRect barFrame = {{0, size.height - scrollerWidth}, {size.width, scrollerWidth}};

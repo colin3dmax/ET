@@ -146,7 +146,7 @@ static float DefaultScaleMenuFactors[] = {
   0.2f, 0.3f, 0.5f, 0.75f, 1.0f, 1.3f, 1.6f, 2.0f, 2.5f, 3.0f, 6.0f, 8.0f, 10.0f
 };
 static unsigned DefaultScaleMenuSelectedItemIndex = 4;
-static float BarFontSize = 14.0;
+static float BarFontSize = 12.0;
 
 - (void) createItems
 {
@@ -198,7 +198,7 @@ static float BarFontSize = 14.0;
   Class oldCellClass = [NSTextField cellClass];
   [NSTextField setCellClass: [VerticallyCenteredTextFieldCell class]];
 
-  mCaretPositionLabel = [[NSTextField alloc] initWithFrame: NSMakeRect(0.0, 0.0, 50.0, 1.0)];
+  mCaretPositionLabel = [[NSTextField alloc] initWithFrame: NSMakeRect(0.0, 0.0, 200.0, 1.0)];
   [mCaretPositionLabel setBezeled: NO];
   [mCaretPositionLabel setBordered: NO];
   [mCaretPositionLabel setEditable: NO];
@@ -431,7 +431,7 @@ static float BarFontSize = 14.0;
     mCurrentCaretX = newX;
     mCurrentCaretY = newY;
 
-    [mCaretPositionLabel setStringValue: [NSString stringWithFormat: @"%d:%d", newX, newY]];
+    [mCaretPositionLabel setStringValue: [NSString stringWithFormat: @"Line %d,Column %d", newX, newY]];
   }
 }
 
